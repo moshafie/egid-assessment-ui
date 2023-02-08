@@ -1,0 +1,37 @@
+<div class="mat-elevation-z8">
+    <table class="table-hover" mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="stokeId">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.stokeId}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="stockName">
+        <th mat-header-cell *matHeaderCellDef>Stock Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.stockName}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons 
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+<div>
+ 
+
+</div>
+  </div>

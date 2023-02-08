@@ -1,0 +1,37 @@
+<table id="Order" class="table"> 
+   
+        <thead>
+            <tr>
+                <td>
+                    <button class="btn btn-primary" (click)="addOrder()">Add</button>
+                </td>
+             </tr>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Commission</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Broker</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+            <ng-container *ngFor="let order of Orders">
+            <tr>
+            <td >{{order.ID}}</td>
+            <td id="price">{{order.Price}}</td>
+            <td>{{order.Quantity}}</td>
+            <td>{{order.Commission}}</td>
+            <td >{{order.Stoke.StockName}}</td>
+            <td>{{order.Broker.Name}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteOrder(order.id)">Delete</button>
+            </td>
+         
+        </tr>
+        </ng-container>
+        
+    </tbody>
+
+</table>

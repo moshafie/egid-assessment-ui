@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+             
+            ]
           },
           "configurations": {
             "production": {
@@ -88,9 +92,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            ]
           }
         },
         "lint": {
@@ -119,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "egid-assessment-ui"
+    }
+  },
+  "defaultProject": "egid-assessment-ui",
+  "cli": {
+    "analytics": "ae1ad157-483c-4010-91e3-9c5064e13953"
+  }
 }

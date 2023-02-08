@@ -1,0 +1,48 @@
+//add-new-order.component.html bootstrap form
+
+<div class="container" >
+  <div class="row" >
+    <div class="col-md-12" >
+      <h1 >Add New Order</ h1 >
+      <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" >
+        <div class="form-group" >
+          <label >Stoke Name</ label >
+            <select
+            class="custom-select mb-3"
+            (change)="changeStock($event)"
+            formControlName="stockName"
+            
+          >
+            <option value="">Choose Stock</option>
+            <option *ngFor="let Stoke of Stoks" [ngValue]="Stoke">
+              {{ Stoke.stockName }}
+            </option>
+          </select>
+        </div >
+        <div class="form-group" >
+          <label >Price </ label >
+          <input type="text" class="form-control" formControlName="price" >
+        </div >
+        <div class="form-group" >
+          <label >Quantity</ label >
+          <input type="text" class="form-control" formControlName="quantity" >
+        </ div >
+        <div class="form-group" >
+            <label >Broker</ label >
+                <select
+                class="custom-select mb-3"
+                (change)="changeBroKer($event)"
+                formControlName="Broker"
+                
+              >
+                <option value="">Choose Broker</option>
+                <option  *ngFor="let Broker of Brokers" [ngValue]="Broker">
+                  {{ Broker.name }}
+                </option>
+              </select>
+          </ div >
+        <button type="submit" class="btn btn-primary" >Submit</button >
+      </form>
+    </div>
+  </div> 
+
