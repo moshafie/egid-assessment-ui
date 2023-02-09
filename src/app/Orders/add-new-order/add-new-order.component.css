@@ -1,0 +1,9 @@
+.formdiv{
+    margin-top: 10%;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f8f8f8;
+    box-shadow: 0 0 10px #4d4d4d;
+}

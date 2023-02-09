@@ -53,7 +53,7 @@ export class AddNewOrderComponent implements OnInit {
       Price:this.orderForm.value.price,
       Quantity:this.orderForm.value.quantity,
       BrokerId:this.orderForm.value.Broker.id,
-      personId:1,
+      personId:this.orderForm.value.Broker.personId,
       Commission:0,
       ID:0
     }
