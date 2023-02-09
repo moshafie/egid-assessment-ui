@@ -68,13 +68,7 @@ export class AddNewOrderComponent implements OnInit {
     console.log(event.target.value);
   }
   changeStock(event){
- 
-  if(this.orderForm.value.Price=='' && this.orderForm.value.Price==null)
-    {
-        debugger;
-        this.orderForm.patchValue({price:this.Stoks.find(x=>x.stokeId==this.orderForm.value.stockName.stokeId).price});
-    }
-    else{
+      this.orderForm.patchValue({price:this.Stoks.find(x=>x.stokeId==this.orderForm.value.stockName.stokeId).price});
       this.signalRService.startConnection();
       this.signalRService.addStocksPriceListener();
       this.signalRService.AllFeedObservable.subscribe(
@@ -86,7 +80,6 @@ export class AddNewOrderComponent implements OnInit {
           this.zone.run(() => { });
           return item;
         })});  
-    }
   }
 
 }
